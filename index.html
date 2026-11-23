@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="az" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AzərKargo Logistika | Növbəti Nəsil Rəqəmsal Yükdaşıma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient-mesh"></div>
+  <div id="toast-stack" class="toast-stack"></div>
+
+  <!-- 1. FLOATING GLASS NAVBAR -->
+  <div class="navbar-wrap">
+    <header class="navbar">
+      <a href="#" class="brand">
+        <div class="brand-logo" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <div>
+          <span class="brand-name">AZƏR<span>KARGO</span></span>
+          <span class="brand-tag">Telemetry Logistics</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="#kalkulyator" class="nav-link">Kalkulyator</a>
+        <a href="#izleme" class="nav-link">Canlı İzləmə</a>
+        <a href="#xidmetler" class="nav-link">Xidmətlər</a>
+        <a href="#avtopark" class="nav-link">Avtopark</a>
+        <a href="#haqqimizda" class="nav-link">Haqqımızda</a>
+      </nav>
+
+      <div class="nav-controls">
+        <a href="tel:*0888" class="cta-dispatch">
+          <span class="live-dot"></span>
+          <div class="dispatch-info">
+            <span class="dispatch-sub">24/7 Dispetçer</span>
+            <span class="dispatch-num">*0888</span>
+          </div>
+        </a>
+
+        <button type="button" id="theme-toggle" class="icon-btn" aria-label="Temanı dəyiş">
+          <svg id="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+          <svg id="icon-moon" class="hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+          </svg>
+        </button>
+
+        <button type="button" id="mobile-toggle" class="icon-btn mobile-toggle" aria-label="Menyu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <div id="mobile-drawer" class="mobile-drawer">
+      <a href="#kalkulyator" class="drawer-link">Ağıllı Tarif Kalkulyatoru</a>
+      <a href="#izleme" class="drawer-link">Canlı GPS İzləmə</a>
+      <a href="#xidmetler" class="drawer-link">Xidmətlər</a>
+      <a href="#avtopark" class="drawer-link">Avtopark</a>
+      <a href="#haqqimizda" class="drawer-link">Haqqımızda &amp; FAQ</a>
+      <a href="tel:*0888" class="btn-primary" style="margin-top: 0.4rem;">24/7 Qaynar Xətt: *0888</a>
+    </div>
+  </div>
+
+  <!-- 2. ASYMMETRIC SPLIT / BENTO HERO SECTION -->
+  <section class="hero">
+    <div class="container hero-bento">
+      <!-- Left Main Bento Tile -->
+      <div class="hero-main-card reveal">
+        <div>
+          <div class="hero-telemetry-pill">
+            <span class="live-dot"></span>
+            <span>● 142 Nəqliyyat Hazırda Xətdədir</span>
+          </div>
+
+          <h1 class="hero-title">
+            Növbəti Nəsil <span class="gradient-text">Rəqəmsal Logistika</span> və Yükdaşıma
+          </h1>
+
+          <p class="hero-subtitle">
+            Süni intellekt dəstəkli marşrut planlaması, real vaxt GPS telemetriya və 100% sığortalı yük daşıma ekosistemi — ölkədaxili və beynəlxalq xətlərdə.
+          </p>
+
+          <div class="hero-cta-row">
+            <a href="#kalkulyator" class="btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="16" y2="18"/></svg>
+              Qiymət Hesabla
+            </a>
+            <a href="#izleme" class="btn-glass">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg>
+              Yükü İzlə
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-metrics-grid">
+          <div class="metric-tile">
+            <span class="metric-val amber">99.4%</span>
+            <span class="metric-lbl">Vaxtında çatdırılma</span>
+          </div>
+          <div class="metric-tile">
+            <span class="metric-val cyan">24/7</span>
+            <span class="metric-lbl">Canlı GPS nəzarət</span>
+          </div>
+          <div class="metric-tile">
+            <span class="metric-val">100%</span>
+            <span class="metric-lbl">Tam yük sığortası</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side Bento Stack -->
+      <div class="hero-side-col reveal">
+        <div class="hero-visual-card">
+          <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1000&q=80" alt="Müasir logistika mərkəzi və konteyner daşımaları" onerror="this.src='https://placehold.co/800x400/0c1222/f59e0b?text=AzerKargo+Logistics'" />
+          <div class="hero-visual-overlay">
+            <span class="radar-badge">● BAKU HUB • 40.4093° N, 49.8671° E</span>
+            <strong style="font-size: 1.05rem;">Avtomatlaşdırılmış Terminal və Beynəlxalq TIR Xətti</strong>
+          </div>
+        </div>
+
+        <div class="quick-track-card">
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="eyebrow" style="margin-bottom: 0;">Sürətli Radar</span>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--emerald);">● SİSTEM AKTİVDİR</span>
+            </div>
+            <h2 style="font-size: 1.35rem; margin-top: 0.65rem;">Yükünüzü Dərhal İzləyin</h2>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.2rem;">
+              Qaimə kodunu daxil edərək canlı telemetriya məlumatlarını açın.
+            </p>
+
+            <form id="hero-track-form">
+              <div class="track-input-box">
+                <svg class="track-input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 5v14M8 5v14M12 5v14M17 5v14M21 5v14"/></svg>
+                <input type="text" id="hero-track-input" class="track-input" value="KV-9428-AZ" placeholder="KV-XXXX-AZ" />
+              </div>
+              <button type="submit" class="btn-primary" style="width: 100%;">
+                Radarda Göstər
+              </button>
+            </form>
+          </div>
+
+          <div class="sample-chips">
+            <span style="font-size: 0.75rem; color: var(--text-muted);">Nümunə:</span>
+            <button type="button" class="chip-btn quick-track-trigger" data-code="KV-9428-AZ">KV-9428-AZ</button>
+            <button type="button" class="chip-btn quick-track-trigger" data-code="KV-3810-TR">KV-3810-TR</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. INTERACTIVE SMART TARIFF CALCULATOR -->
+  <section id="kalkulyator" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Ağıllı Qiymət Mühərriki</span>
+          <h2 class="section-title">İnteraktiv Tarif Kalkulyatoru</h2>
+          <p class="section-desc">Şəhərlərarası real məsafə və nəqliyyat tutumuna əsasən ani qiymət hesablanması.</p>
+        </div>
+        <div class="distance-pill" id="route-telemetry-pill">Məsafə: ~18 km • Şəhərdaxili</div>
+      </div>
+
+      <div class="calc-grid reveal">
+        <!-- Left Configurator -->
+        <div class="glass-panel">
+          <!-- Step 1: Origin & Destination -->
+          <div class="calc-block">
+            <div class="block-label">
+              <span class="block-title"><span class="step-badge">01</span> Başlanğıc və Təyinat Məntəqəsi</span>
+            </div>
+
+            <div class="route-select-row">
+              <div>
+                <label for="calc-origin" class="field-caption">Haradan (Yükləmə)</label>
+                <select id="calc-origin" class="select-box"></select>
+              </div>
+
+              <button type="button" id="swap-cities-btn" class="swap-btn" title="İstiqamətləri dəyiş" aria-label="İstiqamətləri dəyiş">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4"/></svg>
+              </button>
+
+              <div>
+                <label for="calc-dest" class="field-caption">Haraya (Boşaltma)</label>
+                <select id="calc-dest" class="select-box"></select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Vehicle Selector -->
+          <div class="calc-block">
+            <div class="block-label">
+              <span class="block-title"><span class="step-badge">02</span> Nəqliyyat Vasitəsi</span>
+            </div>
+            <div id="vehicle-selector-grid" class="vehicle-selector-grid"></div>
+          </div>
+
+          <!-- Step 3: Porters, Floor & Elevator -->
+          <div class="calc-block">
+            <div class="block-label">
+              <span class="block-title"><span class="step-badge">03</span> İşçi Qüvvəsi və Mərtəbə</span>
+            </div>
+
+            <div class="controls-3">
+              <div>
+                <span class="field-caption">Fəhlə sayı (15 AZN/nəfər)</span>
+                <div class="stepper-control">
+                  <button type="button" id="porter-dec" class="step-btn">-</button>
+                  <span id="porter-count" class="step-num-display">2</span>
+                  <button type="button" id="porter-inc" class="step-btn">+</button>
+                </div>
+              </div>
+
+              <div>
+                <label for="floor-input" class="field-caption">Mərtəbə: <strong id="floor-val-label" style="color: var(--amber);">3-cü</strong></label>
+                <input type="number" id="floor-input" class="select-box" min="1" max="25" value="3" />
+              </div>
+
+              <div>
+                <span class="field-caption">Yük Lifti</span>
+                <label class="switch-box">
+                  <span id="elevator-status-lbl" style="font-size: 0.85rem; font-weight: 700;">Lift var</span>
+                  <input type="checkbox" id="elevator-toggle" checked style="display: none;" />
+                  <span class="switch-track"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Pill Toggles -->
+          <div class="calc-block">
+            <div class="block-label">
+              <span class="block-title"><span class="step-badge">04</span> Əlavə Xidmət Paketləri</span>
+            </div>
+
+            <div class="addon-pills">
+              <label class="addon-pill" id="pill-packaging">
+                <input type="checkbox" id="chk-packaging" style="display: none;" />
+                <div>
+                  <span class="addon-pill-title">Qablaşdırma</span>
+                  <span class="addon-pill-sub">Streç, köpük və qoruyucu qutular</span>
+                </div>
+                <span class="addon-price-badge">+25 AZN</span>
+              </label>
+
+              <label class="addon-pill" id="pill-assembly">
+                <input type="checkbox" id="chk-assembly" style="display: none;" />
+                <div>
+                  <span class="addon-pill-title">Mebel Ustası</span>
+                  <span class="addon-pill-sub">Peşəkar sökülmə və quraşdırma</span>
+                </div>
+                <span class="addon-price-badge">+30 AZN</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Sticky Summary Panel -->
+        <aside class="receipt-card">
+          <div class="receipt-top">
+            <div>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #fbbf24; text-transform: uppercase;">Canlı Kalkulyasiya</span>
+              <h3 style="font-size: 1.35rem; margin-top: 0.2rem;">Sifariş Xülasəsi</h3>
+            </div>
+            <span class="eta-pill" id="sum-eta">~45 dəq</span>
+          </div>
+
+          <div class="receipt-lines">
+            <div class="r-line">
+              <span>Marşrut:</span>
+              <strong id="sum-route">Bakı → Gəncə</strong>
+            </div>
+            <div class="r-line">
+              <span>Məsafə:</span>
+              <strong id="sum-km">365 km</strong>
+            </div>
+            <div class="r-line">
+              <span>Nəqliyyat:</span>
+              <strong id="sum-vehicle" style="color: #fbbf24;">Ford Transit (3t)</strong>
+            </div>
+            <div class="r-line">
+              <span>Baza və məsafə haqqı:</span>
+              <strong id="sum-base">0 AZN</strong>
+            </div>
+            <div class="r-line">
+              <span>Fəhlə xidməti (<span id="sum-porters-num">2</span> nəfər):</span>
+              <strong id="sum-porters">30 AZN</strong>
+            </div>
+            <div class="r-line">
+              <span>Mərtəbə / Lift fərqi:</span>
+              <strong id="sum-floor">0 AZN</strong>
+            </div>
+            <div class="r-line">
+              <span>Əlavə paketlər:</span>
+              <strong id="sum-addons">0 AZN</strong>
+            </div>
+          </div>
+
+          <div class="receipt-total">
+            <div>
+              <span style="font-size: 0.85rem; color: #94a3b8; display: block;">Yekun Məbləğ</span>
+              <span style="font-size: 0.72rem; color: #10b981;">✓ 100% Yük Sığortası Daxildir</span>
+            </div>
+            <div>
+              <span id="sum-total" class="price-big">0</span>
+              <span style="font-family: var(--font-mono); font-weight: 800; font-size: 1.15rem;">AZN</span>
+            </div>
+          </div>
+
+          <button type="button" id="open-order-modal" class="btn-primary" style="width: 100%; font-size: 1rem;">
+            Sifarişi Rəsmiləşdir
+          </button>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. LIVE TELEMETRY & CARGO TRACKING PORTAL -->
+  <section id="izleme" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">GPS Telemetriya Sistemi</span>
+          <h2 class="section-title">Canlı Yük İzləmə Portalı</h2>
+          <p class="section-desc">Yükün real vaxt koordinatları, sürət göstəricisi, sürücü məlumatı və marşrut xronologiyası.</p>
+        </div>
+      </div>
+
+      <div class="tracking-shell reveal">
+        <form id="portal-track-form" class="tracking-search-bar">
+          <input type="text" id="portal-track-input" value="KV-9428-AZ" placeholder="İzləmə kodunu daxil edin (məs: KV-9428-AZ)" />
+          <button type="submit" class="btn-primary">Telemetriyanı Yüklə</button>
+        </form>
+
+        <div class="tracking-samples" id="tracking-samples-bar">
+          <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">Aktiv reyestr kodları:</span>
+          <button type="button" class="chip-btn quick-track-trigger" data-code="KV-9428-AZ">KV-9428-AZ (Bakı → Gəncə)</button>
+          <button type="button" class="chip-btn quick-track-trigger" data-code="KV-3810-TR">KV-3810-TR (İstanbul → Bakı)</button>
+        </div>
+
+        <div id="telemetry-output"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. BENTO-GRID SERVICES SHOWCASE -->
+  <section id="xidmetler" class="section">
+    <div class="container">
+      <div class="section-head-center reveal">
+        <span class="eyebrow">Ekosistem Həlləri</span>
+        <h2 class="section-title">Müasir Logistika Xidmətlərimiz</h2>
+        <p class="section-desc">Fərdi köçürmələrdən tutmuş transmilli konteyner və refrijerator daşımalarına qədər tam xidmət.</p>
+      </div>
+
+      <div class="services-bento reveal">
+        <!-- Card 1 (7 cols) -->
+        <div class="bento-service span-7">
+          <img class="bento-bg-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Ev və ofis köçürülməsi" />
+          <div class="bento-content">
+            <div class="bento-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3>Ev və Ofis Köçürülməsi</h3>
+            <p>Mebellərin peşəkar ustalar tərəfindən sökülməsi, çoxqatlı qoruyucu materiallarla qablaşdırılması və yeni ünvanda quraşdırılması.</p>
+          </div>
+          <a href="#kalkulyator" class="bento-cta">Tarif hesabla →</a>
+        </div>
+
+        <!-- Card 2 (5 cols) -->
+        <div class="bento-service span-5">
+          <img class="bento-bg-img" src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=900&q=80" alt="Beynəlxalq TIR Karqo" />
+          <div class="bento-content">
+            <div class="bento-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3>Beynəlxalq TIR Karqo</h3>
+            <p>Türkiyə, Gürcüstan və Rusiya xətləri üzrə CMR sığortalı FTL/LTL yük daşımaları və gömrük müşayiəti.</p>
+          </div>
+          <a href="#kalkulyator" class="bento-cta">Beynəlxalq tarif →</a>
+        </div>
+
+        <!-- Card 3 (4 cols) -->
+        <div class="bento-service span-4">
+          <div class="bento-content">
+            <div class="bento-icon" style="color: var(--cyan); background: var(--cyan-soft); border-color: rgba(6,182,212,0.3);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="12" y1="2" x2="12" y2="22"/><path d="m20 16-4-4 4-4"/><path d="m4 8 4 4-4 4"/><path d="m16 4-4 4-4-4"/><path d="m8 20 4-4 4 4"/></svg>
+            </div>
+            <h3>Soyuduculu (Refrijerator) Daşıma</h3>
+            <p>-25°C ilə +25°C arası sabit temperatur rejimi ilə qida və tibbi məhsulların təhlükəsiz logistikası.</p>
+          </div>
+          <a href="#avtopark" class="bento-cta">Refrijeratorları gör →</a>
+        </div>
+
+        <!-- Card 4 (4 cols) -->
+        <div class="bento-service span-4">
+          <div class="bento-content">
+            <div class="bento-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+            </div>
+            <h3>Ağıllı Anbar və Saxlama</h3>
+            <p>7/24 kamera nəzarətli, rütubət və temperatur tənzimlənən müasir logistika terminallarında müvəqqəti saxlama.</p>
+          </div>
+          <a href="tel:*0888" class="bento-cta">Anbar sifarişi →</a>
+        </div>
+
+        <!-- Card 5 (4 cols) -->
+        <div class="bento-service span-4">
+          <div class="bento-content">
+            <div class="bento-icon" style="color: var(--emerald); background: var(--emerald-soft); border-color: rgba(16,185,129,0.3);">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3>Ekspres Şəhərdaxili Kuryer</h3>
+            <p>Bakı və Abşeron üzrə 15-30 dəqiqə ərzində ünvana çatan sürətli yük taksisi və kommersiya paylanması.</p>
+          </div>
+          <a href="#kalkulyator" class="bento-cta">Təcili sifariş →</a>
+        </div>
+
+        <!-- Card 6 (12 cols highlight) -->
+        <div class="bento-service" style="grid-column: span 12; flex-direction: row; flex-wrap: wrap; align-items: center; gap: 1.5rem;">
+          <div class="bento-content" style="flex: 1; min-width: 260px;">
+            <div style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 0.65rem;">
+              <div class="bento-icon" style="margin-bottom: 0;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <h3 style="margin-bottom: 0;">Ağır Texnika və Kran-Manipulyator Xidməti</h3>
+            </div>
+            <p style="margin-bottom: 0;">İri qabaritli sənaye avadanlıqları, tikinti konstruksiyaları və konteynerlərin hidravlik kran-manipulyatorlarla yüklənməsi və daşınması.</p>
+          </div>
+          <a href="#kalkulyator" class="btn-primary">Texnika Sifariş Et</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FILTERABLE MODERN FLEET SHOWCASE -->
+  <section id="avtopark" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Texniki Park</span>
+          <h2 class="section-title">Müasir Avtoparkımız</h2>
+          <p class="section-desc">Yükünüzün ölçülərinə (U × E × H) və tonnajına uyğun nəqliyyat vasitəsini seçin.</p>
+        </div>
+
+        <div class="filter-bar" id="fleet-filters">
+          <button type="button" class="filter-btn active" data-filter="all">Hamısı</button>
+          <button type="button" class="filter-btn" data-filter="city">Şəhərdaxili</button>
+          <button type="button" class="filter-btn" data-filter="intercity">Regionlararası</button>
+          <button type="button" class="filter-btn" data-filter="international">Beynəlxalq &amp; Xüsusi</button>
+        </div>
+      </div>
+
+      <div id="fleet-cards-grid" class="fleet-cards-grid reveal"></div>
+    </div>
+  </section>
+
+  <!-- 8. FAQ ACCORDION & SLEEK FOOTER -->
+  <section id="haqqimizda" class="section">
+    <div class="container">
+      <div class="section-head-center reveal">
+        <span class="eyebrow">Məlumat Mərkəzi</span>
+        <h2 class="section-title">Tez-Tez Verilən Suallar</h2>
+        <p class="section-desc">Sığorta təminatı, gömrük sənədləşməsi və tariflərlə bağlı əsas sualların cavabları.</p>
+      </div>
+
+      <div class="faq-container reveal" id="faq-accordion">
+        <div class="faq-card open">
+          <button type="button" class="faq-trigger">
+            <span>Daşınma zamanı yüklərimiz necə sığortalanır?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-panel">
+            Bütün sifarişlər üzrə yüklər təhvil alındığı andan ünvana çatdırılana qədər 100% daşıyıcı məsuliyyəti sığortası ilə qorunur. Beynəlxalq reyslərdə əlavə CMR sığorta polisi təqdim olunur.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <button type="button" class="faq-trigger">
+            <span>Şəhərdaxili sifarişlərdə maşın neçə dəqiqəyə ünvana çatır?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-panel">
+            Bakı və Sumqayıt ərazisində GPS dispetçer sistemimiz sizə ən yaxın boş nəqliyyat vasitəsini yönləndirir. Orta çatma müddəti 15-25 dəqiqədir.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <button type="button" class="faq-trigger">
+            <span>Türkiyə, Gürcüstan və Rusiya istiqamətlərinə gömrük işlərini kim görür?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-panel">
+            Beynəlxalq karqo şöbəmizin gömrük brokerləri ixrac-idxal bəyannamələrinin və tranzit sənədlərinin hazırlanmasında müştərilərimizə tam dəstək göstərir.
+          </div>
+        </div>
+
+        <div class="faq-card">
+          <button type="button" class="faq-trigger">
+            <span>Korporativ müqavilə və köçürmə yolu ilə ödəniş mümkündürmü?</span>
+            <span class="faq-chevron">▼</span>
+          </button>
+          <div class="faq-panel">
+            Bəli, şirkətlər üçün aylıq korporativ müqavilə, elektron qaimə-faktura (E-Qaimə) və bank köçürməsi ilə ödəniş imkanı mövcuddur.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="brand" style="margin-bottom: 1rem;">
+            <div class="brand-logo">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <div>
+              <span class="brand-name">AZƏR<span>KARGO</span></span>
+              <span class="brand-tag">Telemetry Logistics</span>
+            </div>
+          </a>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
+            Azərbaycanın rəqəmsal logistika və yükdaşıma platforması. Sürət, dəqiqlik və tam təhlükəsizlik.
+          </p>
+          <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--emerald);">● 24/7 Dispetçer Mərkəzi: *0888</span>
+        </div>
+
+        <div>
+          <h4>Platforma</h4>
+          <ul class="footer-list">
+            <li><a href="#kalkulyator">Ağıllı Kalkulyator</a></li>
+            <li><a href="#izleme">Canlı GPS İzləmə</a></li>
+            <li><a href="#xidmetler">Logistika Xidmətləri</a></li>
+            <li><a href="#avtopark">Avtopark və Ölçülər</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Baş Ofis (Bakı)</h4>
+          <ul class="footer-list">
+            <li>Bakı ş., Xətai r-nu, Babək prospekti 21/99, AzərKargo Plaza</li>
+            <li>Qaynar xətt: <strong style="color: var(--amber);">*0888</strong></li>
+            <li>Mobil: +994 (50) 555-08-88</li>
+            <li>E-poçt: ops@azerkargo.az</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Geri Zəng &amp; Yeniliklər</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">Nömrənizi və ya e-poçtunuzu qeyd edin, logistika menecerimiz 5 dəqiqəyə əlaqə saxlasın.</p>
+          <form id="callback-form" class="callback-form">
+            <input type="text" id="callback-input" required placeholder="+994 (__) ___-__-__" />
+            <button type="submit" class="btn-primary" style="padding: 0.7rem 1rem;">Göndər</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 AzərKargo Logistika MMC. Bütün hüquqlar qorunur.</span>
+        <span>Məxfilik Siyasəti • Daşıma Şərtləri • Sığorta Lisenziyası № AZ-2026</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 4. ORDER CONFIRMATION MODAL & TRACKING CODE GENERATOR -->
+  <div id="order-modal" class="modal-overlay">
+    <div class="modal-dialog">
+      <button type="button" id="close-modal-x" class="modal-close-btn" aria-label="Bağla">✕</button>
+
+      <!-- Step A: Customer Form -->
+      <div id="modal-step-form">
+        <span class="eyebrow">Ani Rezervasiya</span>
+        <h3 style="font-size: 1.45rem; margin-bottom: 0.25rem;">Sifarişi Rəsmiləşdirin</h3>
+        <p style="font-size: 0.85rem; color: var(--text-secondary);">Məlumatlarınızı daxil edin, sistem dərhal fərdi GPS izləmə kodu yaradacaq.</p>
+
+        <div class="modal-pill-summary">
+          <div>
+            <strong id="m-route" style="display: block; font-size: 0.92rem;">Bakı → Gəncə</strong>
+            <span id="m-details" style="font-size: 0.78rem; color: var(--text-secondary);">Ford Transit (3t) • 2 fəhlə</span>
+          </div>
+          <div style="text-align: right;">
+            <span style="font-size: 0.7rem; color: var(--text-muted); display: block;">Yekun Tarif</span>
+            <strong id="m-price" style="font-family: var(--font-mono); font-size: 1.25rem; color: var(--amber-bright);">0 AZN</strong>
+          </div>
+        </div>
+
+        <form id="confirm-booking-form" style="display: flex; flex-direction: column; gap: 0.9rem;">
+          <div>
+            <label for="cust-name" class="field-caption">Ad və Soyadınız</label>
+            <input type="text" id="cust-name" class="select-box" required placeholder="Məs: Rəşad Əliyev" />
+          </div>
+          <div>
+            <label for="cust-phone" class="field-caption">Əlaqə Telefonu</label>
+            <input type="tel" id="cust-phone" class="select-box" required placeholder="+994 (50) 000-00-00" />
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%; margin-top: 0.35rem;">
+            Təsdiqlə və İzləmə Kodu Yarat
+          </button>
+        </form>
+      </div>
+
+      <!-- Step B: Generated Code Success -->
+      <div id="modal-step-success" class="hidden" style="text-align: center;">
+        <div style="width: 3.75rem; height: 3.75rem; border-radius: 50%; background: var(--emerald-soft); color: var(--emerald); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin: 0 auto 1rem;">
+          ✓
+        </div>
+        <h3 style="font-size: 1.45rem; margin-bottom: 0.35rem;">Sifariş Qəbul Edildi!</h3>
+        <p style="font-size: 0.88rem; color: var(--text-secondary);">
+          Yükünüz GPS telemetriya sisteminə əlavə olundu. Aşağıdakı kodla canlı izləməni başladın:
+        </p>
+
+        <div class="code-ticket">
+          <div style="text-align: left;">
+            <span style="font-size: 0.7rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; display: block;">Unikal İzləmə Kodu</span>
+            <strong id="generated-code-label" style="font-family: var(--font-mono); font-size: 1.5rem; color: var(--amber-bright); letter-spacing: 0.06em;">KV-7492-AZ</strong>
+          </div>
+          <span class="eta-pill">AKTİV</span>
+        </div>
+
+        <button type="button" id="copy-and-track-btn" class="btn-primary" style="width: 100%;">
+          Kodu Kopyala və İzlə
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       VANILLA JAVASCRIPT (ES6+) APPLICATION ENGINE
+       ========================================================================== -->
+  
+  <script src="script.js"></script>
+</body>
+</html>
